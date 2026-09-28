@@ -1,0 +1,54 @@
+/* Breakdown series 색 (Figma에 없는 값 — GameCove 팔레트에 맞춰 추가, 디자이너 요청).
+   카테고리마다 색을 고정한다: 순서·필터와 상관없이 Mobile은 항상 같은 색.
+   코드에서는 lib/dashboard/breakdown-colors.ts의 BREAKDOWN_SERIES_COLORS로만 쓴다. */
+
+:root,
+[data-theme="dark"] {
+  /* Device */
+  --gc-chart-breakdown-mobile: #3898f8;
+  --gc-chart-breakdown-pc: #2fbfa0;
+  --gc-chart-breakdown-tablet: #f2a541;
+  --gc-chart-breakdown-console: #b283f5;
+  /* Country */
+  --gc-chart-breakdown-us: #3898f8;
+  --gc-chart-breakdown-br: #2fbfa0;
+  --gc-chart-breakdown-mx: #f2a541;
+  --gc-chart-breakdown-gb: #b283f5;
+  --gc-chart-breakdown-ca: #f06e8c;
+  --gc-chart-breakdown-kr: #7fd1f7;
+  /* Visit type */
+  --gc-chart-breakdown-new: #3898f8;
+  --gc-chart-breakdown-returning: #f2a541;
+}
+
+[data-theme="light"] {
+  --gc-chart-breakdown-mobile: #007dfa;
+  --gc-chart-breakdown-pc: #0f9a7d;
+  --gc-chart-breakdown-tablet: #d98a1f;
+  --gc-chart-breakdown-console: #8b5cd6;
+  --gc-chart-breakdown-us: #007dfa;
+  --gc-chart-breakdown-br: #0f9a7d;
+  --gc-chart-breakdown-mx: #d98a1f;
+  --gc-chart-breakdown-gb: #8b5cd6;
+  --gc-chart-breakdown-ca: #d6456a;
+  --gc-chart-breakdown-kr: #2aa3d9;
+  --gc-chart-breakdown-new: #007dfa;
+  --gc-chart-breakdown-returning: #d98a1f;
+}
+
+@media (prefers-color-scheme: light) {
+  [data-theme="system"] {
+    --gc-chart-breakdown-mobile: #007dfa;
+    --gc-chart-breakdown-pc: #0f9a7d;
+    --gc-chart-breakdown-tablet: #d98a1f;
+    --gc-chart-breakdown-console: #8b5cd6;
+    --gc-chart-breakdown-us: #007dfa;
+    --gc-chart-breakdown-br: #0f9a7d;
+    --gc-chart-breakdown-mx: #d98a1f;
+    --gc-chart-breakdown-gb: #8b5cd6;
+    --gc-chart-breakdown-ca: #d6456a;
+    --gc-chart-breakdown-kr: #2aa3d9;
+    --gc-chart-breakdown-new: #007dfa;
+    --gc-chart-breakdown-returning: #d98a1f;
+  }
+}
