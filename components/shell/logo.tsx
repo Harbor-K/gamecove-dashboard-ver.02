@@ -6,7 +6,7 @@ export const BRAND_NAME = "GameCove";
 /** Covy 캐릭터 (40×40) */
 export function LogoMark() {
   return (
-    <Image src="/images/logo-covy.png" alt="" width={40} height={40} className="size-10 shrink-0 object-cover" />
+    <Image src={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/images/logo-covy.png`} alt="" width={40} height={40} className="size-10 shrink-0 object-cover" />
   );
 }
 

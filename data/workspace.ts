@@ -2,22 +2,24 @@ import type { Platform, Project, ProjectRole, Studio, User } from "./types";
 
 // UI 단계 값은 Figma "워크스페이스 (셋업 전)" 프레임 그대로.
 
+const asset = (path: string) => `${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}${path}`;
+
 export const currentUser: User = {
   name: "Jacob Parker",
   role: "owner",
-  avatar: "/images/avatar-jacob.webp",
+  avatar: asset("/images/avatar-jacob.webp"),
 };
 
 export const currentStudio: Studio = {
   name: "H2 Studio",
-  thumbnail: "/images/studio-h2.png",
+  thumbnail: asset("/images/studio-h2.png"),
 };
 
 // 대시보드가 생기면 Tower Escape / Lantern Harbor는 셋업 없이 바로 대시보드로 연결한다 (내부 확인용).
 export const projects: Project[] = [
-  { id: "bouncebounce", name: "Bounce Bounce", thumbnail: "/images/project-bouncebounce.png", platform: "roblox", memberCount: 1, role: "owner", activity: { kind: "created" }, needsSetup: true },
-  { id: "tower-escape", name: "Tower Escape", thumbnail: "/images/project-bouncebounce.png", platform: "unity", memberCount: 3, role: "editor", activity: { kind: "updated", ago: { value: 1, unit: "day" } }, needsSetup: false },
-  { id: "lantern-harbor", name: "Lantern Harbor", thumbnail: "/images/project-bouncebounce.png", platform: "roblox", memberCount: 2, role: "editor", activity: { kind: "updated", ago: { value: 3, unit: "day" } }, needsSetup: false },
+  { id: "bouncebounce", name: "Bounce Bounce", thumbnail: asset("/images/project-bouncebounce.png"), platform: "roblox", memberCount: 1, role: "owner", activity: { kind: "created" }, needsSetup: true },
+  { id: "tower-escape", name: "Tower Escape", thumbnail: asset("/images/project-bouncebounce.png"), platform: "unity", memberCount: 3, role: "editor", activity: { kind: "updated", ago: { value: 1, unit: "day" } }, needsSetup: false },
+  { id: "lantern-harbor", name: "Lantern Harbor", thumbnail: asset("/images/project-bouncebounce.png"), platform: "roblox", memberCount: 2, role: "editor", activity: { kind: "updated", ago: { value: 3, unit: "day" } }, needsSetup: false },
 ];
 
 /**
@@ -34,9 +36,9 @@ export const projectsAfterSetup: Project[] = projects.map((p) =>
 
 /** 프로젝트 멤버 (Figma `Popover / Project members`) */
 export const projectMembers: { id: string; name: string; avatar: string; role: ProjectRole; isYou: boolean }[] = [
-  { id: "jacob", name: "Jacob Parker", avatar: "/images/member-jacob.png", role: "owner", isYou: true },
-  { id: "jihyun", name: "Jihyun Kim", avatar: "/images/member-jihyun.png", role: "editor", isYou: false },
-  { id: "minseo", name: "Minseo Park", avatar: "/images/member-minseo.png", role: "viewer", isYou: false },
+  { id: "jacob", name: "Jacob Parker", avatar: asset("/images/member-jacob.png"), role: "owner", isYou: true },
+  { id: "jihyun", name: "Jihyun Kim", avatar: asset("/images/member-jihyun.png"), role: "editor", isYou: false },
+  { id: "minseo", name: "Minseo Park", avatar: asset("/images/member-minseo.png"), role: "viewer", isYou: false },
 ];
 
 export const findProject = (id: string) => projects.find((p) => p.id === id);

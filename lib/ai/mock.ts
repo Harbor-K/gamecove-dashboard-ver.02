@@ -1,4 +1,3 @@
-import "server-only";
 import { mappingNodes } from "@/data/logging";
 import type { AreaId, FunnelStep, MetricId } from "@/data/dashboard/types";
 import { dashboardDefaults } from "@/data/dashboard/dataset";
