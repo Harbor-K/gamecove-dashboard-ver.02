@@ -46,6 +46,10 @@ const ubuntu = Ubuntu({
 
 export const metadata: Metadata = {
   title: "GameCove",
+  icons: {
+    icon: [{ url: `${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/favicon-20260929.svg`, type: "image/svg+xml" }],
+    shortcut: `${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/favicon-20260929.svg`,
+  },
 };
 
 // 저장된 테마(쿠키)를 첫 페인트 전에 넣는 작은 스크립트. 기본 Dark.
