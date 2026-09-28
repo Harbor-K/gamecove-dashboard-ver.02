@@ -4,6 +4,8 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 First, run the development server:
 
+link-https://harbor-k.github.io/gamecove-dashboard-ver.02/
+
 ```bash
 npm run dev
 # or
