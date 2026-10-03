@@ -69,7 +69,11 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           {themeScript}
         </Script>
         <I18nProvider>{children}</I18nProvider>
-        <Script src="https://api.useberry.com/integrations/liveUrl/scripts/useberryScript.js" />
+        <script
+          type="text/javascript"
+          src="https://api.useberry.com/integrations/liveUrl/scripts/useberryScript.js"
+          async
+        ></script>
       </body>
     </html>
   );
